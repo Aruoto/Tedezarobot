@@ -56,16 +56,16 @@ def inlinequery(update: Update, _) -> None:
             "keyboard": ".spb ",
         },
         {
-            "title": "Account info on Kigyo",
-            "description": "Look up a Telegram account in Kigyo database",
-            "message_text": "Click the button below to look up a person in Kigyo database using their Telegram ID",
+            "title": "Account info on Tedeza",
+            "description": "Look up a Telegram account in Tedeza database",
+            "message_text": "Click the button below to look up a person in Tedeza database using their Telegram ID",
             "thumb_urL": "https://telegra.ph/file/c85e07b58f5b3158b529a.jpg",
             "keyboard": ".info ",
         },
         {
             "title": "About",
-            "description": "Know about Kigyo",
-            "message_text": "Click the button below to get to know about Kigyo.",
+            "description": "Know about Tedeza",
+            "message_text": "Click the button below to get to know about Tedeza.",
             "thumb_urL": "https://telegra.ph/file/c85e07b58f5b3158b529a.jpg",
             "keyboard": ".about ",
         },
@@ -224,7 +224,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/YorktownEagleUnion",
+                    url=f"https://t.me/TedezaSupportChat",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -255,8 +255,8 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    Kigyo (@{context.bot.username})
-    Maintained by [Dank-del](t.me/dank_as_fuck)
+    Tedeza (@{context.bot.username})
+    Maintained by [Vrushankz](t.me/Vrushankz)
     Built with ❤️ using python-telegram-bot v{str(__version__)}
     Running on Python {python_version()}
     """
@@ -266,11 +266,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/YorktownEagleUnion",
+                    url=f"https://t.me/TedezaSupportChat",
                 ),
                 InlineKeyboardButton(
                     text="Channel",
-                    url=f"https://t.me/KigyoUpdates",
+                    url=f"https://t.me/Tedeza_News",
                 ),
 
             ],
