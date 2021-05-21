@@ -276,12 +276,12 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             ],
             [
                 InlineKeyboardButton(
-                    text="GitLab",
-                    url=f"https://www.gitlab.com/Dank-del/EnterpriseALRobot",
+                    text="My Love",
+                    url=f"https://t.me/Vrushankz",
                 ),
                 InlineKeyboardButton(
                     text="GitHub",
-                    url="https://www.github.com/Dank-del/EnterpriseALRobot",
+                    url="https://www.github.com/Aruoto/TedezaRoBot",
                 ),
             ],
         ])
@@ -291,7 +291,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultArticle
             (
             id=str(uuid4()),
-            title=f"About Kigyo (@{context.bot.username})",
+            title=f"About Tedeza (@{context.bot.username})",
             input_message_content=InputTextMessageContent(about_text, parse_mode=ParseMode.MARKDOWN,
                                                           disable_web_page_preview=True),
             reply_markup=kb
@@ -362,7 +362,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/YorktownEagleUnion",
+                    url=f"https://t.me/TedezaSupportChat",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -506,7 +506,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="t.me/YorktownEagleUnion",
+                        url="t.me/TedezaSupportChat",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
