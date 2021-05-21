@@ -43,14 +43,14 @@ The Support group can be reached out to at [Tedeza Support](https://t.me/TedezaS
 *Enjoy!*
 
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [Eagle Union](https://t.me/YorktownEagleUnion)  
+For queries or any issues regarding the bot please open an issue ticket or visit us at [Tedeza Support](https://t.me/TedezaSupportChat)  
 
 ## Credits
 The bot is based of on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
 This repo was just reamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
 
 
-Should any be missing kindly let us know at [Eagle Union](https://t.me/YorktownEagleUnion) or simply submit a pull request on the readme.
+Should any be missing kindly let us know at [Tedeza Support](https://t.me/TedezaSupportChat) or simply submit a pull request on the readme.
 
 
 -------------------------------------------------------------------------------------
