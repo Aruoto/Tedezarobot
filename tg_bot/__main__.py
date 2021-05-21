@@ -223,15 +223,15 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text=gs(chat.id, "support_chat_link_btn"),
-                                url=f"https://t.me/YorktownEagleUnion",
+                                url=f"https://t.me/TedezaSupportChat",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "updates_channel_link_btn"),
-                                url="https://t.me/KigyoUpdates",
+                                url="https://t.me/Tedeza_News",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "src_btn"),
-                                url="https://github.com/Dank-del/EnterpriseALRobot",
+                                url="https://github.com/Aruoto/TedezaRoBot",
                             ),
                             
                         ],
@@ -342,7 +342,7 @@ def help_button(update, context):
         elif prev_match:
             curr_page = int(prev_match.group(1))
             kb = paginate_modules(curr_page - 1, HELPABLE, "help")
-            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
+            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/TedezaSupportChat'),
             InlineKeyboardButton(text='Back', callback_data='start_back'), InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
                 text=gs(chat.id, "pm_help_text"),
@@ -353,7 +353,7 @@ def help_button(update, context):
         elif next_match:
             next_page = int(next_match.group(1))
             kb = paginate_modules(next_page + 1, HELPABLE, "help")
-            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
+            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/TedezaSupportChat'),
             InlineKeyboardButton(text='Back', callback_data='start_back'), InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
                 text=gs(chat.id, "pm_help_text"),
@@ -363,7 +363,7 @@ def help_button(update, context):
 
         elif back_match:
             kb = paginate_modules(0, HELPABLE, "help")
-            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
+            kb.append([InlineKeyboardButton(text='Support', url='https://t.me/TedezaSupportChat'),
             InlineKeyboardButton(text='Back', callback_data='start_back'), InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
                 text=gs(chat.id, "pm_help_text"),
@@ -658,7 +658,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        log.info(f"Kigyo started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
+        log.info(f"Tedeza started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
         KigyoINIT.bot_id = dispatcher.bot.id
         KigyoINIT.bot_username = dispatcher.bot.username
         KigyoINIT.bot_name = dispatcher.bot.first_name
