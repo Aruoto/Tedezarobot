@@ -59,21 +59,21 @@ def inlinequery(update: Update, _) -> None:
             "title": "Account info on Tedeza",
             "description": "Look up a Telegram account in Tedeza database",
             "message_text": "Click the button below to look up a person in Tedeza database using their Telegram ID",
-            "thumb_urL": "https://telegra.ph/file/c85e07b58f5b3158b529a.jpg",
+            "thumb_urL": "https://telegra.ph/file/fdcf54623b142ac333217.jpg",
             "keyboard": ".info ",
         },
         {
             "title": "About",
             "description": "Know about Tedeza",
             "message_text": "Click the button below to get to know about Tedeza.",
-            "thumb_urL": "https://telegra.ph/file/c85e07b58f5b3158b529a.jpg",
+            "thumb_urL": "https://telegra.ph/file/fdcf54623b142ac333217.jpg",
             "keyboard": ".about ",
         },
         {
             "title": "Anilist",
             "description": "Search anime and manga on AniList.co",
             "message_text": "Click the button below to search anime and manga on AniList.co",
-            "thumb_urL": "https://telegra.ph/file/c85e07b58f5b3158b529a.jpg",
+            "thumb_urL": "https://telegra.ph/file/fdcf54623b142ac333217.jpg",
             "keyboard": ".anilist ",
         },
     ]
@@ -153,7 +153,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
         text += f"\n\nThis person is my owner"
         nation_level_present = True
     elif user.id in DEV_USERS:
-        text += f"\n\nThis Person is a part of Eagle Union"
+        text += f"\n\nThis Person is a Dev of Tedeza"
         nation_level_present = True
     elif user.id in SUDO_USERS:
         text += f"\n\nThe Nation level of this person is Royal"
