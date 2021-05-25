@@ -15,11 +15,9 @@ from ptbcontrib.postgres_persistence import PostgresPersistence
 
 StartTime = time.time()
 
-def get_user_list(key):
-    # Import here to evade a circular import
-    from tg_bot.modules.sql import nation_sql
-    royals = nation_sql.get_royals(key)
-    return [a.user_id for a in royals]
+def get_user_list(__init__, key):
+    with open("{}/Tedeza/{}".format(os.getcwd(), __init__), "r") as json_file:
+        return json.load(json_file)[key]
 
 # enable logging
 FORMAT = "[Enterprise] %(message)s"
@@ -27,9 +25,9 @@ logging.basicConfig(handlers=[RichHandler()], level=logging.INFO, format=FORMAT,
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 log = logging.getLogger("rich")
 
-log.info("[KIGYO] Kigyo is starting. | An Eagle Union Project. | Licensed under GPLv3.")
+log.info("[TEDEZA] Tedeza is starting. | An Eagle Union Project. | Licensed under GPLv3.")
 
-log.info("[KIGYO] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
+log.info("[TEDEZA] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
 log.info("[KIGYO] Project maintained by: github.com/Dank-del (t.me/dank_as_fuck)")
 
 # if version < 3.6, stop bot.
