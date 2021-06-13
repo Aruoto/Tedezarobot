@@ -383,8 +383,8 @@ def removesardegna(update: Update, context: CallbackContext) -> str:
         return ""
 
 # I added extra new lines
-nations = """ Kigyō has bot access levels we call as *"Nation Levels"*
-\n*Eagle Union* - Devs who can access the bots server and can execute, edit, modify bot code. Can also manage other Nations
+nations = """ Tedeza has bot access levels we call as *"Nation Levels"*
+\n*Tedeza Union* - Devs who can access the bots server and can execute, edit, modify bot code. Can also manage other Nations
 \n*God* - Only one exists, bot owner.
 Owner has complete bot access, including bot adminship in chats Kigyō is at.
 \n*Royals* - Have super user access, can gban, manage Nations lower than them and are admins in Kigyō.
@@ -392,7 +392,7 @@ Owner has complete bot access, including bot adminship in chats Kigyō is at.
 \n*Sardegnas* - Same as Neptunians but can unban themselves if banned.
 \n*Neptunians* - Cannot be banned, muted flood kicked but can be manually banned by admins.
 \n*Disclaimer*: The Nation levels in Kigyō are there for troubleshooting, support, banning potential scammers.
-Report abuse or ask us more on these at [Eagle Union](https://t.me/YorktownEagleUnion).
+Report abuse or ask us more on these at [Tedeza Union](https://t.me/YorktownEagleUnion).
 """
 
 
