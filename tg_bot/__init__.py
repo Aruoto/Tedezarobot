@@ -15,10 +15,6 @@ from ptbcontrib.postgres_persistence import PostgresPersistence
 
 StartTime = time.time()
 
-def get_user_list(__init__, key):
-    with open("{}/Tedeza/{}".format(os.getcwd(), __init__), "r") as json_file:
-        return json.load(json_file)[key]
-
 # enable logging
 FORMAT = "[Enterprise] %(message)s"
 logging.basicConfig(handlers=[RichHandler()], level=logging.INFO, format=FORMAT, datefmt="[%X]")
@@ -28,7 +24,7 @@ log = logging.getLogger("rich")
 log.info("[TEDEZA] Tedeza is starting. | An Eagle Union Project. | Licensed under GPLv3.")
 
 log.info("[TEDEZA] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
-log.info("[KIGYO] Project maintained by: github.com/Dank-del (t.me/dank_as_fuck)")
+log.info("[TEDEZA] Project maintained by: github.com/Dank-del (t.me/dank_as_fuck)")
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 7:
