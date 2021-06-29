@@ -1,34 +1,22 @@
 # Language name in their native
-language: "English 🇺🇲"
+language: "日本語 🇯🇵"
 # name of people(s) who worked on this translation
 authors: "@dank_as_fuck"
 
 # languages
-curr_chat_lang: "Hey. Your current language is {}, select the one you want from the buttons below :)"
-set_chat_lang: "Great, {} it is from now on!"
+curr_chat_lang: "ねえ。現在の言語は {} です。下のボタンから、必要な言語を選択してください"
+set_chat_lang: "すばらしい、{} これからです!"
 
 
 pm_start_text: |
-   Hi {}, I'm {},
-   I am an Anime themed group management bot with some fun extras ;)
-   
-   I can do a variety of things, most common of em are:
-   - Restrict users with *ban permissions*.
-   - Greet users with media + text and buttons, with proper formatting.
-   - Restrict users who flood your chat using my *anti-flood* module.
-   - *Warn* users according to the options set and restrict em accordingly.
-   - Save notes and filters with proper formatting and reply markup.
-   
-   Theres even more! this is just the tip of the iceberg. Do note I need
-   to be promoted with proper admin permissions to function properly. 
-   Else I won't be able to function as said.
-   
-   *Click on help to learn more!*
-   
-grp_start_text: "Hi, I'm Tedeza."
+   こんにちは{}、私の名前は{}です！
+   私はアニメをテーマにしたグループ管理ボットで、楽しい機能がいくつかあります;）
+
+   使用可能なコマンドのリストは /help で見つけることができます。
+grp_start_text: 「こんにちは、キギョです。」
 
 pm_help_text: |
-   Hello there! My name is *Tedeza*. A part of *Eagle Union*.
+   Hello there! My name is *Kigyo*. A part of *Eagle Union*.
    I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of
    the things I can help you with.
    *Main* commands available:
@@ -40,10 +28,10 @@ pm_help_text: |
       - in a group: will redirect you to pm, with all that chat's settings.
     Click on the buttons below to get documentation about specific modules!
 
-add_bot_to_group_btn: "Add Tedeza"
-support_chat_link_btn: "Support"
-updates_channel_link_btn: "Updates"
-src_btn: "Source code"
+add_bot_to_group_btn:  "私を追加してください"
+support_chat_link_btn:  "サポート"
+updates_channel_link_btn: "更新"
+src_btn:  "ソース"
 
 admin_help: |
    • `/admins`*:* list of admins in the chat
@@ -70,7 +58,7 @@ anilist_help: |
      - /manga <manga>: returns information about the manga.
 
 antiflood_help: |
-    Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood
+    Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
     will result in restricting that user.
      This will mute users if they send more than 10 messages in a row, bots are ignored.
      • `/flood`*:* Get the current flood control setting
@@ -101,7 +89,7 @@ backup_help: |
     *Admin only:*
      - /import: reply to a group butler backup file to import as much as possible, making the transfer super simple! Note \
        that files/photos can't be imported due to telegram restrictions.
-     - /export: Export group data, which will be exported are: rules, notes (documents, images, music, video, audio, voice, text, text buttons)
+     - /export: !!! This isn't a command yet, but should be coming soon!
 
 bans_help: |
     - /kickme: kicks the user who issued the command
@@ -170,77 +158,31 @@ disable_help: |
      • /listcmds: List all possible disablable commands
 
 feds_help: |
-    Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
+    Ah, group management. Everything is fun, until the spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
     But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?
-    *No longer!* With Federation, you can make a ban in one chat overlap with all other chats.
-    You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.
-    
-    *Click on the buttons below to learn in depth about all the commands.*
 
-FED_OWNER_HELP: | 
-    *Fed Owner Only:*
-    • `/newfed <fed_name>`*:* Creates a Federation, One allowed per user
-    • `/renamefed <fed_id> <new_fed_name>`*:* Renames the fed id to a new name
-    • `/delfed <fed_id>`*:* Delete a Federation, and any information related to it. Will not cancel blocked users
-    • `/fpromote <user>`*:* Assigns the user as a federation admin. Enables all commands for the user under `Fed Admins`
-    • `/fdemote <user>`*:* Drops the User from the admin Federation to a normal User
-    • `/subfed <fed_id>`*:* Subscribes to a given fed ID, bans from that subscribed fed will also happen in your fed
-    • `/unsubfed <fed_id>`*:* Unsubscribes to a given fed ID
-    • `/setfedlog <fed_id>`*:* Sets the group as a fed log report base for the federation
-    • `/unsetfedlog <fed_id>`*:* Removed the group as a fed log report base for the federation
-    • `/fbroadcast <message>`*:* Broadcasts a messages to all groups that have joined your fed
-    • `/fedsubs`*:* Shows the feds your group is subscribed to `(broken rn)`
+    No longer! With Federation, you can make a ban in one chat overlap with all other chats.
+    You can even designate admin federations, so your trusted admin can ban all the chats you want to protect.
 
-FED_ADMIN_HELP: |
-    *Fed Admins:*
-    • `/fban <user> <reason>`*:* Fed bans a user
-    • `/unfban <user> <reason>`*:* Removes a user from a fed ban
-    • `/fedinfo <fed_id>`*:* Information about the specified Federation
-    • `/joinfed <fed_id>`*:* Join the current chat to the Federation. Only chat owners can do this. Every chat can only be in one Federation
-    • `/leavefed <fed_id>`*:* Leave the Federation given. Only chat owners can do this
-    • `/setfrules <rules>`*:* Arrange Federation rules
-    • `/fedadmins`*:* Show Federation admin
-    • `/fbanlist`*:* Displays all users who are victimized at the Federation at this time
-    • `/fedchats`*:* Get all the chats that are connected in the Federation
-    • `/chatfed `*:* See the Federation in the current chat
+    *Commands Available*:
 
-FED_USER_HELP: | 
-    *Any user:*
-    • `/fbanstat`*:* Shows if you/or the user you are replying to or their username is fbanned somewhere or not
-    • `/fednotif <on/off>`*:* Federation settings not in PM when there are users who are fbaned/unfbanned
-    • `/frules`*:* See Federation regulations
-
-formt_help_bse: |
-    Kigyo supports a large number of formatting options to make your messages more expressive. Take a look!
-
-md_help: |
-    <b>Markdown Formatting</b>
-      You can format your message using *bold*, _italics_, -underline-, and much more. Go ahead and experiment!
-      <b>Supported markdown</b>:
-      - <code>`code words`</code>: Backticks are used for monospace fonts. Shows as: <code>code words</code>.
-      - <code>_italic words_</code>: Underscores are used for italic fonts. Shows as: <i>italic words</i>.
-      - <code>*bold words*</code>: Asterisks are used for bold fonts. Shows as: <b>bold words</b>.
-      - <code>~strikethrough~</code>: Tildes are used for strikethrough. Shows as: <strike>strikethrough</strike>.
-      - <code>[hyperlink](example.com)</code>: This is the formatting used for hyperlinks. Shows as: <a href="https://example.com/">hyperlink</a>.
-      - <code>[My Button](buttonurl://example.com)</code>: This is the formatting used for creating buttons. This example will create a button named "My button" which opens <code>example.com</code> when clicked.
-      If you would like to send buttons on the same row, use the <code>:same</code> formatting.
-      <b>Example:</b>
-      <code>[button 1](buttonurl://example.com)</code>
-      <code>[button 2](buttonurl://example.com:same)</code>
-      <code>[button 3](buttonurl://example.com)</code>
-      This will show button 1 and 2 on the same line, with 3 underneath.
-filling_help: |
-      <b>Fillings</b>
-      You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the welcome message, or mention them in a filter!
-      You can use these to mention a user in notes too!
-      <b>Supported fillings:</b>
-      - <code>{first}</code>: The user's first name.
-      - <code>{last}</code>: The user's last name.
-      - <code>{fullname}</code>: The user's full name.
-      - <code>{username}</code>: The user's username. If they don't have one, mentions the user instead.
-      - <code>{mention}</code>: Mentions the user with their firstname.
-      - <code>{id}</code>: The user's ID.
-      - <code>{chatname}</code>: The chat's name.
+     • /newfed <fedname>: Create a new Federation with the name given. Users are only allowed to have one Federation. This method can also be used to rename the Federation. (max. 64 characters)
+     • /delfed: Delete your Federation, and any information related to it. Will not cancel blocked users.
+     • /fedinfo <FedID>: Information about the specified Federation.
+     • /joinfed <FedID>: Join the current chat to the Federation. Only chat owners can do this. Every chat can only be in one Federation.
+     • /leavefed <FedID>: Leave the Federation given. Only chat owners can do this.
+     • /fpromote <user>: Promote Users to give fed admin. Fed owner only.
+     • /fdemote <user>: Drops the User from the admin Federation to a normal User. Fed owner only.
+     • /fban <user>: Prohibits users from all federations where this chat takes place, and executors have control over.
+     • /unfban <user>: Cancel User from all federations where this chat takes place, and that the executor has control over.
+     • /setfrules: Arrange Federation rules.
+     • /frules: See Federation regulations.
+     • /chatfed: See the Federation in the current chat.
+     • /fedadmins: Show Federation admin.
+     • /fbanlist: Displays all users who are victimized at the Federation at this time.
+     • /fednotif <on / off>: Federation settings not in PM when there are users who are fban / unfban.
+     • /fedchats: Get all the chats that are connected in the Federation.
+     • /importfbans: Reply to the Federation backup message file to import the banned list to the Federation now. (disabled for now.)
 
 fun_help: |
      • /runs: reply a random string from an array of replies.
@@ -256,6 +198,7 @@ fun_help: |
      • /stickerid: reply to a sticker to get its ID.
      • /getsticker: reply to a sticker to get the raw PNG image.
      • /steal: reply to a sticker or image to add it to your pack.
+     • /stickers: search stickers in combot sticker finder.
 
 antispam_help: |
      *Admins only:*
@@ -265,15 +208,11 @@ antispam_help: |
      you and your groups by removing spam flooders as quickly as possible.
      *Note:* Users can appeal gbans or report spammers at @YorkTownEagleUnion
 
-     Kigyo also integrates @Spamwatch and @Intellivoid's SpamProtectionBot API to remove Spammers as much as possible from your chatroom!
+     Kigyo also integrates @Spamwatch API to remove Spammers as much as possible from your chatroom!
      *What is SpamWatch?*
-     SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters.
+     SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters[.](https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
      Constantly help banning spammers off from your group automatically So, you wont have to worry about spammers storming your group.
      *Note:* Users can appeal spamwatch bans at @SpamwatchSupport
-
-     *What is Spam protection?*
-     SpamProtection is the new AI antispam service which makes sure that your chat is free of spambots, scammers, and pedophiles.
-     Uses @Intellivoid's Coffeehouse Artificial Engine. Every ban is checked by real trusty people before being finalized.
 
 gtranslate_help: |
      Use this module to translate stuff... duh!
@@ -284,6 +223,7 @@ gtranslate_help: |
      • `/tl <source>//<dest>`: translates from <source> to <lang>.
      eg: `/tl ja//en`: translates from Japanese to English.
      • `/langs`: get a list of supported languages for translation.
+
 locks_help: |
      Do stickers annoy you? or want to avoid people sharing links? or pictures?
      You're in the right place!
@@ -319,7 +259,7 @@ log_help: |
       • forwarding the `/setlog` to the group
 
 markdown_help_text: |
-      Markdown is a very powerful formatting tool supported by telegram. Kigyo has some enhancements, to make sure that
+      Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that
       saved messages are correctly parsed, and to allow you to create buttons.
 
       - <code>_italic_</code>: wrapping text with '_' will produce italic text
@@ -424,7 +364,7 @@ warns_help: |
       *Admins only:*
       • `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
       • `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
-      • `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to
+      • `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
       be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`.
       • `/nowarn <keyword>`*:* stop a warning filter
       • `/warnlimit <num>`*:* set the warning limit
@@ -448,15 +388,6 @@ greetings_help: |
 
       *Welcome markdown:*
        • `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
-
-nation_help: |
-      - /eagle - Lists all Eagle Union members.
-      - /royals - Lists all Royal Nations.
-      - /sakuras - Lists all Sakura Nations.
-      - /sardegnas - Lists all Sardegnas Nations.
-      - /neptunians - Lists all Neptunia Nations.
-      Note: These commands list users with special bot priveleges and can only be used by them.
-      You can visit @YorktownEagleUnion to query more about these.
 
 nlp_help: |
 
