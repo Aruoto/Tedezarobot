@@ -1,6 +1,6 @@
 ![Tedeza](https://telegra.ph/file/fdcf54623b142ac333217.jpg)
 
-## Tedeza // @Tedeza_Bot
+# Tedeza // @Tedeza_Bot
 
 A modular telegram Python bot running on python3 with an sqlalchemy database.
 Tedeza make your group management fun and easy!
