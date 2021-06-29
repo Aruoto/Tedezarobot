@@ -1,7 +1,10 @@
 # Language name in their native
 language: "English 🇺🇲"
 # name of people(s) who worked on this translation
-authors: "@dank_as_fuck"
+
+# reworked by Aruoto <github.com/Aruoto>
+
+authors: "@dank_as_fuck, @Beast_boy_shubu"
 
 # languages
 curr_chat_lang: "Hey. Your current language is {}, select the one you want from the buttons below :)"
@@ -467,3 +470,15 @@ nlp_help: |
        it [here](https://docs.intellivoid.net/coffeehouse/v1/nlp/spam_prediction/chatroom)
        *Command:*
         • `/nlpstat <on/off/yes/no>`*:* toggle NLP in your chat.
+
+android_help: |
+
+   Get Latest magisk relese, Twrp for your device or info about some device using its codename, Directly from Bot!
+
+   *Android related commands:*
+
+    - /magisk - Gets the latest magisk release for Stable/Beta/Canary.
+    - /device <codename> - Gets android device basic info from its codename.
+    - /twrp <codename> -  Gets latest twrp for the android device using the codename.
+
+
