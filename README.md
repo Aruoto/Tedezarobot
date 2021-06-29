@@ -1,5 +1,5 @@
-![Enterprise](https://telegra.ph/file/fdcf54623b142ac333217.jpg)
-# Kigyō bot // @KigyoRobot
+![Tedeza](https://telegra.ph/file/fdcf54623b142ac333217.jpg)
+# Tedeza
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Dank-del/)</br>
