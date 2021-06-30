@@ -21,7 +21,7 @@ logging.basicConfig(handlers=[RichHandler()], level=logging.INFO, format=FORMAT,
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 log = logging.getLogger("rich")
 
-log.info("[TEDEZA] Tedeza is starting. | An Eagle Union Project. | Licensed under GPLv3.")
+log.info("[TEDEZA] Tedeza is starting. | A Project. | Licensed under GPLv3.")
 
 log.info("[TEDEZA] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
 log.info("[TEDEZA] Project maintained by: github.com/Aruoto (t.me/dank_as_fuck)")
@@ -29,7 +29,7 @@ log.info("[TEDEZA] Project maintained by: github.com/Aruoto (t.me/dank_as_fuck)"
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 7:
     log.error(
-        "[KIGYO] You MUST have a python version of at least 3.7! Multiple features depend on this. Bot quitting."
+        "[TEDEZA] You MUST have a python version of at least 3.7! Multiple features depend on this. Bot quitting."
     )
     quit(1)
 
