@@ -5,9 +5,9 @@ import requests
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext
 
-from tg_bot import dispatcher, LASTFM_API_KEY
-from tg_bot.modules.helper_funcs.decorators import kigcmd
-import tg_bot.modules.sql.last_fm_sql as sql
+from Tedeza import dispatcher, LASTFM_API_KEY
+from Tedeza.modules.helper_funcs.decorators import kigcmd
+import Tedeza.modules.sql.last_fm_sql as sql
 
 @kigcmd(command='setuser')
 def set_user(update: Update, context: CallbackContext):

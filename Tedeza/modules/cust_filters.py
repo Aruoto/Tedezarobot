@@ -13,25 +13,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from tg_bot import dispatcher, log, SUDO_USERS
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.helper_funcs.extraction import extract_text
-from tg_bot.modules.helper_funcs.filters import CustomFilters
-from tg_bot.modules.helper_funcs.misc import build_keyboard_parser
-from tg_bot.modules.helper_funcs.msg_types import get_filter_type
-from tg_bot.modules.helper_funcs.string_handling import (
+from Tedeza import dispatcher, log, SUDO_USERS
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.helper_funcs.chat_status import user_admin
+from Tedeza.modules.helper_funcs.extraction import extract_text
+from Tedeza.modules.helper_funcs.filters import CustomFilters
+from Tedeza.modules.helper_funcs.misc import build_keyboard_parser
+from Tedeza.modules.helper_funcs.msg_types import get_filter_type
+from Tedeza.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from tg_bot.modules.sql import cust_filters_sql as sql
+from Tedeza.modules.sql import cust_filters_sql as sql
 
-from tg_bot.modules.connection import connected
+from Tedeza.modules.connection import connected
 
-from tg_bot.modules.helper_funcs.alternate import send_message, typing_action
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
+from Tedeza.modules.helper_funcs.alternate import send_message, typing_action
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
 
 
 HANDLER_GROUP = 10
@@ -579,7 +579,7 @@ def __chat_settings__(chat_id, user_id):
     cust_filters = sql.get_chat_triggers(chat_id)
     return "There are `{}` custom filters here.".format(len(cust_filters))
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "cust_filters_help")

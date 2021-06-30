@@ -24,7 +24,7 @@ log = logging.getLogger("rich")
 log.info("[TEDEZA] Tedeza is starting. | A Project. | Licensed under GPLv3.")
 
 log.info("[TEDEZA] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
-log.info("[TEDEZA] Project maintained by: github.com/Aruoto (t.me/dank_as_fuck)")
+log.info("[TEDEZA] Project maintained by: github.com/Aruoto, (t.me/dank_as_fuck)")
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 7:
@@ -128,7 +128,7 @@ SPB_MODE = kigconfig.getboolean('SPB_MODE', False)
 # SpamWatch
 sw = KInit.init_sw()
 
-from tg_bot.modules.sql import SESSION
+from Tedeza.modules.sql import SESSION
 
 updater = tg.Updater(TOKEN, workers=min(32, os.cpu_count() + 4), request_kwargs={"read_timeout": 10, "connect_timeout": 10}, persistence=PostgresPersistence(SESSION))
 telethn = TelegramClient(MemorySession(), APP_ID, API_HASH)
@@ -166,7 +166,7 @@ async def get_entity(client, entity):
     return entity, entity_client
 
 # Load at end to ensure all prev variables have been set
-from tg_bot.modules.helper_funcs.handlers import CustomCommandHandler
+from Tedeza.modules.helper_funcs.handlers import CustomCommandHandler
 
 if CUSTOM_CMD and len(CUSTOM_CMD) >= 1:
     tg.CommandHandler = CustomCommandHandler

@@ -1,4 +1,4 @@
-from tg_bot import LOAD, NO_LOAD, log
+from Tedeza import LOAD, NO_LOAD, log
 
 
 def __list_all_modules():

@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 
-import tg_bot.modules.sql.blacklistusers_sql as sql
-from tg_bot import (
+import Tedeza.modules.sql.blacklistusers_sql as sql
+from Tedeza import (
     DEV_USERS,
     OWNER_ID,
     SUDO_USERS,
@@ -10,14 +10,14 @@ from tg_bot import (
     WHITELIST_USERS,
     dispatcher,
 )
-from tg_bot.modules.helper_funcs.chat_status import dev_plus
-from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from tg_bot.modules.log_channel import gloggable
+from Tedeza.modules.helper_funcs.chat_status import dev_plus
+from Tedeza.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from Tedeza.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 BLACKLISTWHITELIST = (
     [OWNER_ID] + DEV_USERS + SUDO_USERS + WHITELIST_USERS + SUPPORT_USERS

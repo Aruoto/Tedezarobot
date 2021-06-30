@@ -4,8 +4,8 @@ import re
 import time
 from functools import partial
 from io import BytesIO
-import tg_bot.modules.sql.welcome_sql as sql
-from tg_bot import (
+import Tedeza.modules.sql.welcome_sql as sql
+from Tedeza import (
     DEV_USERS,
     log,
     OWNER_ID,
@@ -16,18 +16,18 @@ from tg_bot import (
     sw,
     dispatcher,
 )
-from tg_bot.modules.helper_funcs.chat_status import (
+from Tedeza.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from tg_bot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from tg_bot.modules.helper_funcs.msg_types import get_welcome_type
-from tg_bot.modules.helper_funcs.string_handling import (
+from Tedeza.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Tedeza.modules.helper_funcs.msg_types import get_welcome_type
+from Tedeza.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.sql.antispam_sql import is_user_gbanned
+from Tedeza.modules.log_channel import loggable
+from Tedeza.modules.sql.antispam_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -1210,7 +1210,7 @@ def __chat_settings__(chat_id, user_id):
     )
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "greetings_help")

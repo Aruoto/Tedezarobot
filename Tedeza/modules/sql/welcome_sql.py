@@ -2,8 +2,8 @@ import random
 import threading
 from typing import Union
 
-from tg_bot.modules.helper_funcs.msg_types import Types
-from tg_bot.modules.sql import BASE, SESSION
+from Tedeza.modules.helper_funcs.msg_types import Types
+from Tedeza.modules.sql import BASE, SESSION
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
 DEFAULT_WELCOME = "Hey {first}, how are you?"

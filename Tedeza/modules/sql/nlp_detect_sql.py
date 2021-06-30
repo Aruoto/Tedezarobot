@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, UnicodeText, Integer, String, Boolean
 
-from tg_bot.modules.sql import BASE, SESSION
+from Tedeza.modules.sql import BASE, SESSION
 
 
 

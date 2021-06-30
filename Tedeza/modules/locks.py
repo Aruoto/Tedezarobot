@@ -5,23 +5,23 @@ from telegram import TelegramError, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import Filters
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg
 from alphabet_detector import AlphabetDetector
-from tg_bot.modules.sql.approve_sql import is_approved
-import tg_bot.modules.sql.locks_sql as sql
-from tg_bot import dispatcher, SUDO_USERS, log
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import (
+from Tedeza.modules.sql.approve_sql import is_approved
+import Tedeza.modules.sql.locks_sql as sql
+from Tedeza import dispatcher, SUDO_USERS, log
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.helper_funcs.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
     is_bot_admin,
     user_admin,
 )
-from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.connection import connected
+from Tedeza.modules.log_channel import loggable
+from Tedeza.modules.connection import connected
 
-from tg_bot.modules.helper_funcs.alternate import send_message, typing_action
+from Tedeza.modules.helper_funcs.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 
@@ -550,7 +550,7 @@ def __chat_settings__(chat_id, user_id):
     return build_lock_message(chat_id)
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "locks_help")

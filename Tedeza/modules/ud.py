@@ -1,7 +1,7 @@
 import requests
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 @kigcmd(command=["ud", "urban"])
 def ud(update: Update, context: CallbackContext):

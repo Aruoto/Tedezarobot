@@ -4,7 +4,7 @@ from asyncio import sleep
 
 from pyrogram import filters
 from pyrogram.errors import PeerIdInvalid
-from tg_bot import kp
+from Tedeza import kp
 
 
 class AioHttp:

@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String
 
-from tg_bot.modules.sql import BASE, SESSION
+from Tedeza.modules.sql import BASE, SESSION
 
 
 class LastFMUsers(BASE):

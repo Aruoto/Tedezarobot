@@ -1,9 +1,9 @@
 import subprocess
 
-from tg_bot import log as LOGGER, dispatcher, SYS_ADMIN
+from Tedeza import log as LOGGER, dispatcher, SYS_ADMIN
 from telegram import ParseMode, Update
 from telegram.ext import Filters, CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 @kigcmd(command='sh', filters=Filters.user(SYS_ADMIN))
 def shell(update: Update, context: CallbackContext):

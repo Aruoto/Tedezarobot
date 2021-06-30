@@ -1,8 +1,8 @@
 import requests
-from tg_bot import CASH_API_KEY
+from Tedeza import CASH_API_KEY
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 @kigcmd(command='cash')
 def convert(update: Update, context: CallbackContext):

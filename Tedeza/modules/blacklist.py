@@ -4,19 +4,19 @@ from telegram import ParseMode, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import Filters
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.sql.approve_sql import is_approved
-import tg_bot.modules.sql.blacklist_sql as sql
-from tg_bot import log, dispatcher
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from tg_bot.modules.helper_funcs.extraction import extract_text
-from tg_bot.modules.helper_funcs.misc import split_message
-from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.warns import warn
-from tg_bot.modules.helper_funcs.string_handling import extract_time
-from tg_bot.modules.connection import connected
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg
-from tg_bot.modules.helper_funcs.alternate import send_message, typing_action
+from Tedeza.modules.sql.approve_sql import is_approved
+import Tedeza.modules.sql.blacklist_sql as sql
+from Tedeza import log, dispatcher
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Tedeza.modules.helper_funcs.extraction import extract_text
+from Tedeza.modules.helper_funcs.misc import split_message
+from Tedeza.modules.log_channel import loggable
+from Tedeza.modules.warns import warn
+from Tedeza.modules.helper_funcs.string_handling import extract_time
+from Tedeza.modules.connection import connected
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg
+from Tedeza.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = -3
 
@@ -452,7 +452,7 @@ def __stats__():
 
 __mod_name__ = "Blacklists"
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "blacklist_help")

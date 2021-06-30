@@ -1,7 +1,7 @@
 import threading
 
 from sqlalchemy import Column, String, UnicodeText
-from tg_bot.modules.sql import SESSION, BASE
+from Tedeza.modules.sql import SESSION, BASE
 
 
 class ChatLangs(BASE):

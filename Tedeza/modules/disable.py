@@ -5,12 +5,12 @@ from telegram import ParseMode, Update, Chat
 from telegram.ext import CommandHandler, MessageHandler
 from telegram.utils.helpers import escape_markdown
 
-from tg_bot import dispatcher
-from tg_bot.modules.helper_funcs.handlers import CMD_STARTERS
-from tg_bot.modules.helper_funcs.misc import is_module_loaded
-from tg_bot.modules.helper_funcs.alternate import send_message, typing_action
-from tg_bot.modules.connection import connected
-from tg_bot.modules.language import gs
+from Tedeza import dispatcher
+from Tedeza.modules.helper_funcs.handlers import CMD_STARTERS
+from Tedeza.modules.helper_funcs.misc import is_module_loaded
+from Tedeza.modules.helper_funcs.alternate import send_message, typing_action
+from Tedeza.modules.connection import connected
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "disable_help")
@@ -23,12 +23,12 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
-    from tg_bot.modules.helper_funcs.chat_status import (
+    from Tedeza.modules.helper_funcs.chat_status import (
         user_admin,
         is_user_admin,
     )
 
-    from tg_bot.modules.sql import disable_sql as sql
+    from Tedeza.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []

@@ -3,9 +3,9 @@ import time
 import requests
 from datetime import datetime
 from io import BytesIO
-from tg_bot.modules.sql.users_sql import get_user_com_chats
-import tg_bot.modules.sql.antispam_sql as sql
-from tg_bot import (
+from Tedeza.modules.sql.users_sql import get_user_com_chats
+import Tedeza.modules.sql.antispam_sql as sql
+from Tedeza import (
     DEV_USERS,
     GBAN_LOGS,
     OWNER_ID,
@@ -19,23 +19,23 @@ from tg_bot import (
     KInit,
     KigyoINIT,
 )
-from tg_bot.modules.helper_funcs.chat_status import (
+from Tedeza.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from tg_bot.modules.helper_funcs.misc import send_to_list
-from tg_bot.modules.sql.users_sql import get_all_chats
+from Tedeza.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from Tedeza.modules.helper_funcs.misc import send_to_list
+from Tedeza.modules.sql.users_sql import get_all_chats
 from telegram import ParseMode, Update
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import CallbackContext, Filters
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.helper_funcs.chat_status import dev_plus
+from Tedeza.modules.helper_funcs.chat_status import dev_plus
 from spamprotection.sync import SPBClient
 from spamprotection.errors import HostDownError
 from spamwatch.errors import SpamWatchError, Error, UnauthorizedError, NotFoundError, Forbidden, TooManyRequests
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg
 
 GBAN_ENFORCE_GROUP = -1
 
@@ -77,7 +77,7 @@ client = SPBClient()
 @kigcmd(command="spb")
 @dev_plus
 def spbtoggle(update: Update, context: CallbackContext):
-    from tg_bot import SPB_MODE
+    from Tedeza import SPB_MODE
     args = update.effective_message.text.split(None, 1)
     message = update.effective_message
     print(SPB_MODE)
@@ -437,7 +437,7 @@ def gbanlist(update: Update, context: CallbackContext):
 
 
 def check_and_ban(update, user_id, should_message=True):
-    from tg_bot import SPB_MODE
+    from Tedeza import SPB_MODE
     chat = update.effective_chat  # type: Optional[Chat]
     if SPB_MODE:
         try:
@@ -585,7 +585,7 @@ def __chat_settings__(chat_id, user_id):
     return f"This chat is enforcing *gbans*: `{sql.does_chat_gban(chat_id)}`."
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "antispam_help")

@@ -3,26 +3,26 @@ import re
 from typing import Optional
 
 import telegram
-from tg_bot import BAN_STICKER, SARDEGNA_USERS, WHITELIST_USERS, dispatcher
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import (
+from Tedeza import BAN_STICKER, SARDEGNA_USERS, WHITELIST_USERS, dispatcher
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from tg_bot.modules.helper_funcs.extraction import (
+from Tedeza.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from tg_bot.modules.helper_funcs.filters import CustomFilters
-from tg_bot.modules.helper_funcs.misc import split_message
-from tg_bot.modules.helper_funcs.string_handling import split_quotes
-from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.sql import warns_sql as sql
-from tg_bot.modules.sql.approve_sql import is_approved
+from Tedeza.modules.helper_funcs.filters import CustomFilters
+from Tedeza.modules.helper_funcs.misc import split_message
+from Tedeza.modules.helper_funcs.string_handling import split_quotes
+from Tedeza.modules.log_channel import loggable
+from Tedeza.modules.sql import warns_sql as sql
+from Tedeza.modules.sql.approve_sql import is_approved
 from telegram import (
     CallbackQuery,
     Chat,
@@ -491,7 +491,7 @@ def __chat_settings__(chat_id, user_id):
     )
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "warns_help")

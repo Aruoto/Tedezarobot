@@ -11,7 +11,7 @@ from telegram.ext import CommandHandler, Filters, CallbackContext
 from telegram.utils.helpers import mention_html, escape_markdown
 from subprocess import Popen, PIPE
 
-from tg_bot import (
+from Tedeza import (
     dispatcher,
     OWNER_ID,
     SUDO_USERS,
@@ -23,13 +23,13 @@ from tg_bot import (
     sw,
     StartTime
 )
-from tg_bot.__main__ import STATS, USER_INFO, TOKEN
-from tg_bot.modules.sql import SESSION
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import user_admin, sudo_plus
-from tg_bot.modules.helper_funcs.extraction import extract_user
-import tg_bot.modules.sql.users_sql as sql
-from tg_bot.modules.language import gs
+from Tedeza.__main__ import STATS, USER_INFO, TOKEN
+from Tedeza.modules.sql import SESSION
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.helper_funcs.chat_status import user_admin, sudo_plus
+from Tedeza.modules.helper_funcs.extraction import extract_user
+import Tedeza.modules.sql.users_sql as sql
+from Tedeza.modules.language import gs
 from telegram import __version__ as ptbver, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import __version__ as pyrover
 from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
@@ -38,7 +38,7 @@ import platform
 from platform import python_version
 from spamprotection.sync import SPBClient
 from spamprotection.errors import HostDownError
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 client = SPBClient()
 
 MARKDOWN_HELP = f"""

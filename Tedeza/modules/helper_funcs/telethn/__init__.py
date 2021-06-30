@@ -1,4 +1,4 @@
-from tg_bot import (
+from Tedeza import (
     telethn,
     SUDO_USERS,
     WHITELIST_USERS,

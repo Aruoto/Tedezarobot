@@ -5,10 +5,10 @@ from telegram import Update, ParseMode, MAX_MESSAGE_LENGTH
 from telegram.ext.dispatcher import CallbackContext
 from telegram.utils.helpers import escape_markdown
 
-import tg_bot.modules.sql.userinfo_sql as sql
-from tg_bot import dispatcher, SUDO_USERS, DEV_USERS
-from tg_bot.modules.helper_funcs.extraction import extract_user
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+import Tedeza.modules.sql.userinfo_sql as sql
+from Tedeza import dispatcher, SUDO_USERS, DEV_USERS
+from Tedeza.modules.helper_funcs.extraction import extract_user
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 @kigcmd(command='me', pass_args=True)
 def about_me(update: Update, context: CallbackContext):
@@ -194,7 +194,7 @@ def __user_info__(user_id):
         return "\n"
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "userinfo_help")

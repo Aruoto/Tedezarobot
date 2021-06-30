@@ -2,9 +2,9 @@ from datetime import datetime
 from functools import wraps
 
 from telegram.ext import CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
-from tg_bot.modules.helper_funcs.misc import is_module_loaded
-from tg_bot.modules.language import gs
+from Tedeza.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.misc import is_module_loaded
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "log_help")
@@ -17,9 +17,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, JobQueue
     from telegram.utils.helpers import escape_markdown
 
-    from tg_bot import GBAN_LOGS, log, dispatcher
-    from tg_bot.modules.helper_funcs.chat_status import user_admin
-    from tg_bot.modules.sql import log_channel_sql as sql
+    from Tedeza import GBAN_LOGS, log, dispatcher
+    from Tedeza.modules.helper_funcs.chat_status import user_admin
+    from Tedeza.modules.sql import log_channel_sql as sql
 
     def loggable(func):
         @wraps(func)

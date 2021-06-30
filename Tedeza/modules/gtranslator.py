@@ -9,12 +9,12 @@ from telegram import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
-from tg_bot import dispatcher, kp
+from Tedeza import dispatcher, kp
 from pyrogram import filters
 from pyrogram.types import Message
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.language import gs
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.disable import DisableAbleCommandHandler
+from Tedeza.modules.language import gs
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 
 def get_help(chat):

@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText
 
-from tg_bot.modules.sql import BASE, SESSION
+from Tedeza.modules.sql import BASE, SESSION
 
 
 class BlacklistUsers(BASE):

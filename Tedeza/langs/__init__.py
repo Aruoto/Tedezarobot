@@ -1,4 +1,4 @@
-from tg_bot.langs.language import langs
+from Tedeza.langs.language import langs
 
 get_string = langs.get_string
 reload_strings = langs.reload_strings
