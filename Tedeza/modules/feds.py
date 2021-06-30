@@ -20,7 +20,7 @@ from telegram import (
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
-from tg_bot import (
+from Tedeza import (
     dispatcher,
     OWNER_ID,
     SUDO_USERS,
@@ -28,22 +28,22 @@ from tg_bot import (
     GBAN_LOGS,
     log,
 )
-from tg_bot.modules.helper_funcs.chat_status import is_user_admin
-from tg_bot.modules.helper_funcs.extraction import (
+from Tedeza.modules.helper_funcs.chat_status import is_user_admin
+from Tedeza.modules.helper_funcs.extraction import (
     extract_user,
     extract_unt_fedban,
     extract_user_fban,
 )
-from tg_bot.modules.helper_funcs.string_handling import markdown_parser
+from Tedeza.modules.helper_funcs.string_handling import markdown_parser
 
-import tg_bot.modules.sql.feds_sql as sql
+import Tedeza.modules.sql.feds_sql as sql
 
-from tg_bot.modules.helper_funcs.alternate import (
+from Tedeza.modules.helper_funcs.alternate import (
     send_message,
     typing_action,
     send_action,
 )
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigcallback
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigcallback
 
 # Hello bot owner, I spent many hours of my life for feds, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
@@ -2341,7 +2341,7 @@ def get_chat(chat_id, chat_data):
 
 __mod_name__ = "Federations"
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def fed_owner_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(

@@ -18,7 +18,7 @@ Deploy Tedeza to Heroku:
 `Coming soon...`
 
 ## Config
-you've to set up your database and your configuration, Once you've done, simply run the `python3 -m tg_bot` command.:
+you've to set up your database and your configuration, Once you've done, simply run the `python3 -m Tedeza` command.:
 
 ## Support 
 If you'd just like to know about new features, or announcements, you can join our [Tedeza News](https://t.me/Tedeza_News), 

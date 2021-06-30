@@ -18,7 +18,7 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
-from tg_bot import (
+from Tedeza import (
     dispatcher,
     updater,
     TOKEN,
@@ -35,11 +35,11 @@ from tg_bot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from tg_bot.modules import ALL_MODULES
-from tg_bot.modules.helper_funcs.chat_status import is_user_admin
-from tg_bot.modules.helper_funcs.misc import paginate_modules
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigcallback, kigmsg
-from tg_bot.modules.language import gs
+from Tedeza.modules import ALL_MODULES
+from Tedeza.modules.helper_funcs.chat_status import is_user_admin
+from Tedeza.modules.helper_funcs.misc import paginate_modules
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigcallback, kigmsg
+from Tedeza.modules.language import gs
 
 
 IMPORTED = {}
@@ -54,7 +54,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("tg_bot.modules." + module_name)
+    imported_module = importlib.import_module("Tedeza.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 

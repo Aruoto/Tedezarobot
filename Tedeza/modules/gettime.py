@@ -2,10 +2,10 @@ import datetime
 from typing import List
 
 import requests
-from tg_bot import TIME_API_KEY, dispatcher
+from Tedeza import TIME_API_KEY, dispatcher
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 
 def generate_time(to_find: str, findtype: List[str]) -> str:

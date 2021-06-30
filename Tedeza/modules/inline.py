@@ -15,8 +15,8 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-import tg_bot.modules.sql.users_sql as sql
-from tg_bot import (
+import Tedeza.modules.sql.users_sql as sql
+from Tedeza import (
     OWNER_ID,
     SUDO_USERS,
     SUPPORT_USERS,
@@ -25,8 +25,8 @@ from tg_bot import (
     WHITELIST_USERS,
     sw, log
 )
-from tg_bot.modules.helper_funcs.misc import article
-from tg_bot.modules.helper_funcs.decorators import kiginline
+from Tedeza.modules.helper_funcs.misc import article
+from Tedeza.modules.helper_funcs.decorators import kiginline
 
 
 client = SPBClient()

@@ -9,7 +9,7 @@ from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       TelegramError, Update)
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 
 @kigcmd(command='stickerid')

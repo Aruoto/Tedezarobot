@@ -1,7 +1,7 @@
 from telegram import Message
 from telegram.ext import MessageFilter
 
-from tg_bot import SUPPORT_USERS, SUDO_USERS, DEV_USERS
+from Tedeza import SUPPORT_USERS, SUDO_USERS, DEV_USERS
 
 
 class CustomFilters(object):

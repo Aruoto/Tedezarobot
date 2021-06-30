@@ -2,8 +2,8 @@ import os
 import subprocess
 import sys
 from time import sleep
-from tg_bot import dispatcher, telethn, OWNER_ID
-from tg_bot.modules.helper_funcs.chat_status import dev_plus
+from Tedeza import dispatcher, telethn, OWNER_ID
+from Tedeza.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler
 import asyncio

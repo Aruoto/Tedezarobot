@@ -1,4 +1,4 @@
-from tg_bot.modules.helper_funcs.decorators import kigcallback
+from Tedeza.modules.helper_funcs.decorators import kigcallback
 from telegram import (
     ParseMode,
     Update,
@@ -6,7 +6,7 @@ from telegram import (
     InlineKeyboardButton,
 )
 from telegram.ext import CallbackContext
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def fmt_md_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(

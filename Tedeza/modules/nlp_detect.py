@@ -1,11 +1,11 @@
 from pyrogram import filters
-from tg_bot import kp, log, KInit
+from Tedeza import kp, log, KInit
 from pyrogram.handlers import MessageHandler
 from pyrogram.types import ChatPermissions, Message
 from pyrogram.errors import BadRequest
 import aiohttp, json, asyncio
-import tg_bot.modules.sql.nlp_detect_sql as sql
-from tg_bot.modules.language import gs
+import Tedeza.modules.sql.nlp_detect_sql as sql
+from Tedeza.modules.language import gs
 
 from pyrogram.types import Message
 
@@ -74,7 +74,7 @@ async def detect_spam(client, message):
     if user.id == KInit.bot_id:
         return
 
-    from tg_bot import SPB_MODE, CF_API_KEY
+    from Tedeza import SPB_MODE, CF_API_KEY
     chat_state = sql.does_chat_nlp(chat.id)
     if SPB_MODE and CF_API_KEY and chat_state == True:
         try:

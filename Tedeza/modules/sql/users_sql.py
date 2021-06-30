@@ -1,7 +1,7 @@
 import threading
 
-from tg_bot import dispatcher
-from tg_bot.modules.sql import BASE, SESSION
+from Tedeza import dispatcher
+from Tedeza.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,

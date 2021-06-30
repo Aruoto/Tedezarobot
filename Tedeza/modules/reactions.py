@@ -2,7 +2,7 @@ import random
 
 from telegram import Update
 from telegram.ext import CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 reactions = [
     "( ͡° ͜ʖ ͡°)",

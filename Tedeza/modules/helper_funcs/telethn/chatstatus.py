@@ -1,5 +1,5 @@
-from tg_bot.modules.helper_funcs.telethn import HIGHER_AUTH, telethn
-from tg_bot import SUPPORT_USERS, SARDEGNA_USERS, WHITELIST_USERS
+from Tedeza.modules.helper_funcs.telethn import HIGHER_AUTH, telethn
+from Tedeza import SUPPORT_USERS, SARDEGNA_USERS, WHITELIST_USERS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 

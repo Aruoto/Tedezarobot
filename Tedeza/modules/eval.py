@@ -6,10 +6,10 @@ import textwrap
 import traceback
 from contextlib import redirect_stdout
 
-from tg_bot import log as LOGGER, dispatcher, SYS_ADMIN
+from Tedeza import log as LOGGER, dispatcher, SYS_ADMIN
 from telegram import ParseMode, Update
 from telegram.ext import Filters, CallbackContext
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 namespaces = {}
 
@@ -75,7 +75,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "tg_bot/modules/helper_funcs/temp.txt"), "w",
+        os.path.join(os.getcwd(), "Tedeza/modules/helper_funcs/temp.txt"), "w",
     ) as temp:
         temp.write(body)
 

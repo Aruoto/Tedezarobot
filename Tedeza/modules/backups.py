@@ -2,23 +2,23 @@ import json, time, os
 from io import BytesIO
 from telegram import ParseMode, Message
 from telegram.error import BadRequest
-import tg_bot.modules.sql.notes_sql as sql
-from tg_bot import dispatcher, log as LOGGER, OWNER_ID
-from tg_bot.__main__ import DATA_IMPORT
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.helper_funcs.alternate import typing_action
-from tg_bot.modules.helper_funcs.decorators import kigcmd
-# from tg_bot.modules.rules import get_rules
-import tg_bot.modules.sql.rules_sql as rulessql
-from tg_bot.modules.language import gs
-# from tg_bot.modules.sql import warns_sql as warnssql
-import tg_bot.modules.sql.blacklist_sql as blacklistsql
-from tg_bot.modules.sql import disable_sql as disabledsql
+import Tedeza.modules.sql.notes_sql as sql
+from Tedeza import dispatcher, log as LOGGER, OWNER_ID
+from Tedeza.__main__ import DATA_IMPORT
+from Tedeza.modules.helper_funcs.chat_status import user_admin
+from Tedeza.modules.helper_funcs.alternate import typing_action
+from Tedeza.modules.helper_funcs.decorators import kigcmd
+# from Tedeza.modules.rules import get_rules
+import Tedeza.modules.sql.rules_sql as rulessql
+from Tedeza.modules.language import gs
+# from Tedeza.modules.sql import warns_sql as warnssql
+import Tedeza.modules.sql.blacklist_sql as blacklistsql
+from Tedeza.modules.sql import disable_sql as disabledsql
 
-# from tg_bot.modules.sql import cust_filters_sql as filtersql
-# import tg_bot.modules.sql.welcome_sql as welcsql
-import tg_bot.modules.sql.locks_sql as locksql
-from tg_bot.modules.connection import connected
+# from Tedeza.modules.sql import cust_filters_sql as filtersql
+# import Tedeza.modules.sql.welcome_sql as welcsql
+import Tedeza.modules.sql.locks_sql as locksql
+from Tedeza.modules.connection import connected
 
 def get_help(chat):
     return gs(chat, "backup_help")

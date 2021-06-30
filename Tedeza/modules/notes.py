@@ -2,12 +2,12 @@ import re, ast
 from io import BytesIO
 from typing import Optional
 
-import tg_bot.modules.sql.notes_sql as sql
-from tg_bot import log, dispatcher, SUDO_USERS
-from tg_bot.modules.helper_funcs.chat_status import user_admin, connection_status
-from tg_bot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from tg_bot.modules.helper_funcs.msg_types import get_note_type
-from tg_bot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
+import Tedeza.modules.sql.notes_sql as sql
+from Tedeza import log, dispatcher, SUDO_USERS
+from Tedeza.modules.helper_funcs.chat_status import user_admin, connection_status
+from Tedeza.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Tedeza.modules.helper_funcs.msg_types import get_note_type
+from Tedeza.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
 from telegram import (
     MAX_MESSAGE_LENGTH,
     InlineKeyboardMarkup,
@@ -24,7 +24,7 @@ from telegram.ext import (
     Filters,
 )
 
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
 
 JOIN_LOGGER = None
 FILE_MATCHER = re.compile(r"^###file_id(!photo)?###:(.*?)(?:\s|$)")
@@ -501,7 +501,7 @@ def __chat_settings__(chat_id, user_id):
     notes = sql.get_all_chat_notes(chat_id)
     return f"There are `{len(notes)}` notes in this chat."
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "notes_help")

@@ -1,9 +1,9 @@
 import html
 
-from tg_bot import log, SUDO_USERS, SARDEGNA_USERS, WHITELIST_USERS, dispatcher
-from tg_bot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.sql import reporting_sql as sql
+from Tedeza import log, SUDO_USERS, SARDEGNA_USERS, WHITELIST_USERS, dispatcher
+from Tedeza.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Tedeza.modules.log_channel import loggable
+from Tedeza.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
@@ -12,7 +12,7 @@ from telegram.ext import (
     Filters,
 )
 from telegram.utils.helpers import mention_html
-from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
+from Tedeza.modules.helper_funcs.decorators import kigcmd, kigmsg, kigcallback
 
 REPORT_GROUP = 12
 REPORT_IMMUNE_USERS = SUDO_USERS + SARDEGNA_USERS + WHITELIST_USERS
@@ -265,7 +265,7 @@ def buttons(update: Update, context: CallbackContext):
             query.answer("🛑 Failed to delete message!")
 
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "reports_help")

@@ -1,9 +1,9 @@
 from typing import Optional
 
-import tg_bot.modules.sql.rules_sql as sql
-from tg_bot import dispatcher
-from tg_bot.modules.helper_funcs.chat_status import user_admin
-from tg_bot.modules.helper_funcs.string_handling import markdown_parser
+import Tedeza.modules.sql.rules_sql as sql
+from Tedeza import dispatcher
+from Tedeza.modules.helper_funcs.chat_status import user_admin
+from Tedeza.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -15,7 +15,7 @@ from telegram import (
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters
 from telegram.utils.helpers import escape_markdown
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 
 @kigcmd(command='rules', filters=Filters.chat_type.groups)
@@ -115,7 +115,7 @@ def __migrate__(old_chat_id, new_chat_id):
 def __chat_settings__(chat_id, user_id):
     return f"This chat has had it's rules set: `{bool(sql.get_rules(chat_id))}`"
 
-from tg_bot.modules.language import gs
+from Tedeza.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "rules_help")

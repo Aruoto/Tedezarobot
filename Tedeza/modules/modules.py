@@ -1,7 +1,7 @@
 import importlib
 
-from tg_bot import dispatcher
-from tg_bot.__main__ import (
+from Tedeza import dispatcher
+from Tedeza.__main__ import (
     CHAT_SETTINGS,
     DATA_EXPORT,
     DATA_IMPORT,
@@ -12,10 +12,10 @@ from tg_bot.__main__ import (
     USER_INFO,
     USER_SETTINGS,
 )
-from tg_bot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from Tedeza.modules.helper_funcs.chat_status import dev_plus, sudo_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
-from tg_bot.modules.helper_funcs.decorators import kigcmd
+from Tedeza.modules.helper_funcs.decorators import kigcmd
 
 
 @dev_plus
@@ -28,7 +28,7 @@ def load(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("tg_bot.modules." + text)
+        imported_module = importlib.import_module("Tedeza.modules." + text)
     except:
         load_messasge.edit_text("Does that module even exist?")
         return
@@ -94,7 +94,7 @@ def unload(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("tg_bot.modules." + text)
+        imported_module = importlib.import_module("Tedeza.modules." + text)
     except:
         unload_messasge.edit_text("Does that module even exist?")
         return
@@ -160,7 +160,7 @@ def listmodules(update: Update, context: CallbackContext):
     for helpable_module in HELPABLE:
         helpable_module_info = IMPORTED[helpable_module]
         file_info = IMPORTED[helpable_module_info.__mod_name__.lower()]
-        file_name = file_info.__name__.rsplit("tg_bot.modules.", 1)[1]
+        file_name = file_info.__name__.rsplit("Tedeza.modules.", 1)[1]
         mod_name = file_info.__mod_name__
         module_list.append(f"- <code>{mod_name} ({file_name})</code>\n")
     module_list = "Following modules are loaded : \n\n" + "".join(module_list)

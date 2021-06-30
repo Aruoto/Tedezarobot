@@ -3,8 +3,8 @@ import threading
 from sqlalchemy import Column, String, UnicodeText, Integer, Boolean
 from telegram.error import BadRequest, Unauthorized
 
-from tg_bot import dispatcher
-from tg_bot.modules.sql import SESSION, BASE
+from Tedeza import dispatcher
+from Tedeza.modules.sql import SESSION, BASE
 
 
 class Federations(BASE):

@@ -2,7 +2,7 @@ import html
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import MessageNotModified
 
-from tg_bot import kp, get_entity
+from Tedeza import kp, get_entity
 
 ZWS = "\u200B"
 
