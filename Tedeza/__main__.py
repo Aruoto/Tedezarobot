@@ -160,7 +160,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "src_btn"),
-                                url="https://github.com/Aruoto/TedezaRoBot",
+                                url="https://github.com/EagleCoderZ/Tedezarobot",
                             ),
                             
                         ],
@@ -231,7 +231,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "src_btn"),
-                                url="https://github.com/Aruoto/TedezaRoBot",
+                                url="https://github.com/EagleCoderZ/Tedezarobot",
                             ),
                             
                         ],
