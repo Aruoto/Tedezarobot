@@ -281,7 +281,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
                 ),
                 InlineKeyboardButton(
                     text="GitHub",
-                    url="https://www.github.com/Aruoto/TedezaRoBot",
+                    url="https://www.github.com/EagleCoderZ/Tedezarobot",
                 ),
             ],
         ])
