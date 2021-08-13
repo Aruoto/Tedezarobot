@@ -17,7 +17,7 @@ from Tedeza.modules.helper_funcs.chat_status import (
 
 from Tedeza.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Tedeza.modules.log_channel import loggable
-from Tedeza.modules.helper_funcs.alternate import send_message
+from Tedeza.modules.helper_funcs.alternate import send_message, typing_action
 from Tedeza import kp, get_entity
 from pyrogram import Client, filters
 from pyrogram.types import Chat, User
@@ -29,6 +29,7 @@ from Tedeza.modules.helper_funcs.decorators import kigcmd
 @bot_admin
 @can_promote
 @user_admin
+@typing_action
 @loggable
 def promote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
@@ -113,6 +114,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
+@typing_action
 def demote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -183,6 +185,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
 @kigcmd(command="admincache", can_disable=False)
 @user_admin
+@typing_action
 def refresh_admin(update, _):
     ADMIN_CACHE.pop(update.effective_chat.id)
     update.effective_message.reply_text("Admins cache refreshed!")
@@ -191,6 +194,7 @@ def refresh_admin(update, _):
 @connection_status
 @bot_admin
 @can_promote
+@typing_action
 @user_admin
 def set_title(update: Update, context: CallbackContext):
     bot = context.bot
@@ -255,6 +259,7 @@ def set_title(update: Update, context: CallbackContext):
 @bot_admin
 @can_pin
 @user_admin
+@typing_action
 @loggable
 def pin(update: Update, context: CallbackContext) -> str:
     bot = context.bot
@@ -297,6 +302,7 @@ def pin(update: Update, context: CallbackContext) -> str:
 @can_pin
 @user_admin
 @loggable
+@typing_action
 def unpin(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     chat = update.effective_chat
@@ -321,6 +327,7 @@ def unpin(update: Update, context: CallbackContext) -> str:
 @kigcmd(command="invitelink", can_disable=False)
 @bot_admin
 @user_admin
+@typing_action
 @connection_status
 def invite(update: Update, context: CallbackContext):
     bot = context.bot
