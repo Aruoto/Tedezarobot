@@ -31,4 +31,4 @@ If you find a bug, don't be afraid to report it in our Telegram group or open an
 
 - [@Dank-Del](https://github.com/Dank-Del) - For Base Of This Bot!
 - [@Meanii](https://github.com/meanii) - For Some Xtras Fun Modules! 
-- [@SonOfLars](https://github.com/SonOfLars) - For His Original Work!
+- [@SonOfLars](https://github.com/PaulSonOfLars) - For His Original Work!
