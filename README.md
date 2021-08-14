@@ -6,8 +6,6 @@ A modular telegram Python bot running on python3 with an sqlalchemy database.
 Tedeza make your group management fun and easy!
 She have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
-[![Sparkline](https://stars.medv.io/Aruoto/Tedezarobot.svg)](https://stars.medv.io/Aruoto/Tedezarobot)
-
 ## Installation
 Please see the appropriate guide for your environment of choice:
 - [Heroku](#heroku)
